@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battle</title>
+    <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/battle.js"></script>
+  </head>
+  <body onload="initialize()">
+    <div id="main">
+      <div id="top" class="window">
+          モンスターがあらわれた。
+      </div>
+      <div class="hp_bar" id="monster_hp_bar">
+        <div class="bar"><div class="hp_inner" id="monster_hp_inner"></div></div>
+      </div>
+      <div id="bottom">
+        <div id="command" class="window">
+          <h4 id="command_title"></h4>
+          <ul>
+            <li class="command_li"><a href="javascript:addAction('attack')">たたかう</a></li>
+            <li class="command_li"><a href="javascript:showSpells()">じゅもん</a></li>
+            <li class="command_li"><a href="javascript:addAction('defence')">ぼうぎょ</a></li>
+            <li class="command_li"><a href="javascript:showPreviousCommand()">もどる</a></li>
+            <li class="spell_li" id="cure_spell"><a href="javascript:addAction('cure')">かいふく</a></li>
+            <li class="spell_li" id="lightning_spell"><a href="javascript:addAction('lightning')">いなづま</a></li>
+            <li class="spell_li" id="max_spell"><a href="javascript:addAction('max')">こんしんのいちげき</a></li>
+            <li class="spell_li" id="diamond_spell"><a href="javascript:addAction('diamond')">ダイヤモンドダスト</a></li>
+            <li class="spell_li" id="fire_spell"><a href="javascript:addAction('fire')">ほのお</a></li>
+            <li class="spell_li" id="meteo_spell"><a href="javascript:addAction('meteo')">いんせき</a></li>
+            <li class="spell_li" id="return_to_command"><a href="javascript:prepareCommand()">もどる</a></li>
+          </ul>
+        </div>
+        <div id="status" class="window">
+          <table id="table">
+            <tr>
+              <td class="name" id="yusha_name"></td>
+              <td class="hp" id="yusha_hp"></td>
+              <td class="hp_bar" id="yusha_hp_bar">
+                <div class="bar"><div class="hp_inner" id="yusha_hp_inner"></div></div>
+              </td>
+              <td class="mp" id="yusha_mp"></td>
+              <td class="mp_bar" id="yusha_mp_bar">
+                <div class="bar"><div class="mp_inner" id="yusha_mp_inner"></div></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name" id="senshi_name"></td>
+              <td class="hp" id="senshi_hp"></td>
+              <td class="hp_bar" id="senshi_hp_bar">
+                <div class="bar"><div class="hp_inner" id="senshi_hp_inner"></div></div>
+              </td>
+              <td class="mp" id="senshi_mp"></td>
+              <td class="mp_bar" id="senshi_mp_bar">
+                <div class="bar"><div class="mp_inner" id="senshi_mp_inner"></div></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name" id="kenja_name"></td>
+              <td class="hp" id="kenja_hp"></td>
+              <td class="hp_bar" id="kenja_hp_bar">
+                <div class="bar"><div class="hp_inner" id="kenja_hp_inner"></div></div>
+              </td>
+              <td class="mp" id="kenja_mp"></td>
+              <td class="mp_bar" id="kenja_mp_bar">
+                <div class="bar"><div class="mp_inner" id="kenja_mp_inner"></div></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name" id="mahou_name"></td>
+              <td class="hp" id="mahou_hp"></td>
+              <td class="hp_bar" id="mahou_hp_bar">
+                <div class="bar"><div class="hp_inner" id="mahou_hp_inner"></div></div>
+              </td>
+              <td class="mp" id="mahou_mp"></td>
+              <td class="mp_bar" id="mahou_mp_bar">
+                <div class="bar"><div class="mp_inner" id="mahou_mp_inner"></div></div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
